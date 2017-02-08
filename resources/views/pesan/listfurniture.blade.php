@@ -32,10 +32,16 @@
 				</button>
 				<a class="navbar-brand" href="#"><span>F</span>URNITURE</a>
 				<ul class="user-menu">
-					<li class="dropdown pull-right">
-						</ul>
+					<li>
+					<a href="{{url('/')}}" >
+					<svg  class="glyph stroked home">
+					<use xlink:href="#stroked-home"/>
+					</use>
+					</svg>
+					</a>
 					</li>
-				</ul>
+					</ul>
+		
 			</div>
 
 		</div><!-- /.container-fluid -->

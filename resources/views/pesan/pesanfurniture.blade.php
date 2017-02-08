@@ -32,8 +32,15 @@
 				</button>
 				<a class="navbar-brand" href="#"><span>F</span>URNITURE</a>
 				<ul class="user-menu">
-					<li><a href="/" class="dropdown-toggle" data-toggle="dropdown"><svg  class="glyph stroked home"><use xlink:href="#stroked-home"/></svg></use></a></li>
-						</ul>
+					<li>
+					<a href="{{url('/')}}" >
+					<svg  class="glyph stroked home">
+					<use xlink:href="#stroked-home"/>
+					</use>
+					</svg>
+					</a>
+					</li>
+					</ul>
 			</div>
 
 		</div><!-- /.container-fluid -->

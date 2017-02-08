@@ -79,7 +79,7 @@
 				 <table class="table table-bordered table-hover table-striped">
 				 				 
                                 
-                                    <a href="<?php echo $data['image'];?>" class="col-lg-12" target="_blank"><img src="/admin/image/<?php echo $data['image'];?>" style="width:250px;"></a>
+                                    <a href="{{ url('admin/image/'.$data['image']) }}" class="col-lg-12" target="_blank"><img src="{{ url('admin/image/'.$data['image']) }}" style="width:250px;"></a>
                             
                             	<td>
                                 <tr>
