@@ -86,7 +86,7 @@
 				<div class="panel panel-default">
 					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> Detail
 		
-			<a href="{{ url('admin/laporan/'.$data->id) }}"  type="submit" class=" col-sm-offset-9  btn btn-primary"><svg class="glyph stroked printer"  style="width:48px;height:22px; margin:2px"><use  xlink:href="#stroked-printer"/></svg></a>
+			<a href="{{ url('admin/laporan/'.$data->id) }}"  type="submit" class=" col-sm-offset-8  btn btn-primary"><svg class="glyph stroked printer"  style="width:48px;height:22px; margin:2px"><use  xlink:href="#stroked-printer"/></svg></a>
 </div>
 					<div class="panel-body">
 						<fieldset>  
