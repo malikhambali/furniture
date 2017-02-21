@@ -58,10 +58,21 @@ class FurnitureController extends Controller
       $data = ruangtamu::find($id);
       return view('admin/editbarang', ['data'=>$data]);
     }
+    public function editstatuspm($id)
+    {
+      $data = \App\mesan::find($id);
+      return view('admin.editstatuspm', ['data'=>$data]);
+    }
+    public function editstatusps($id)
+    {
+      $data = pesan::find($id);
+      return view('admin.editstatusps', ['data'=>$data]);
+    }
     public function detailpesan($id)
     {
       $data = ruangtamu::find($id);
-      return view('pesan.detail', ['data'=>$data]);
+      $ruang = ruangtamu::where('id',$id)->first();
+      return view('pesan.detail', ['data'=>$data,'ruang'=>$ruang]);
     }
     public function datapesanan()
     {

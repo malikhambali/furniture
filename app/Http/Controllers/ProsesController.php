@@ -57,6 +57,7 @@ class ProsesController extends Controller
       $editb->save();
       return redirect('admin/databarang');
     }
+
     public function pesanbarang()
     {
       $input = new pesan;
@@ -74,6 +75,7 @@ class ProsesController extends Controller
       $input->image = $image_name;
       $input->no_telpon = Input::get('no_telpon');
       $input->keterangan = Input::get('keterangan');
+      $input->status = 'blom ditangani';
       $input->save();
       return redirect('pesanfurniture');
     
@@ -89,7 +91,22 @@ class ProsesController extends Controller
       $input->no_telp = Input::get('no_telp');
       $input->email = Input::get('email');
       $input->jumlah = Input::get('jumlah');
+      $input->status = 'blom ditangani';
       $input->save();
       return redirect('listfurniture');
+    }
+    public function editstatuspm($id)
+    {
+      $editpm = mesan::find($id);
+      $editpm->status = Input::get('status');
+      $editpm->save();
+      return redirect('admin/datapemesan');
+    }
+    public function editstatusps($id)
+    {
+      $editps = pesan::find($id);
+      $editps->status = Input::get('status');
+      $editps->save();
+      return redirect('admin/datapesanan');
     }
 }

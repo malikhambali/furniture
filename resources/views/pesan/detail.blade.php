@@ -73,7 +73,7 @@
 					<div class="row">
 			<div class="col-md-8">
 				<div class="panel panel-default">
-					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> </div>
+					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg>{{ $ruang->namabarang }} </div>
 					<div class="panel-body">
 						<fieldset>  
 				 <table class="table table-bordered table-hover table-striped">

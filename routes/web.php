@@ -39,6 +39,8 @@ Route::get('pesanfurniture', 'FurnitureController@pesanfurniture');
 Route::get('admin/laporanpemesan/{id}', 'FurnitureController@laporanpemesan');
 Route::get('admin/laporan/{id}', 'FurnitureController@laporan');
 Route::get('admin/laporancontoh/{id}', 'FurnitureController@laporancontoh');
+Route::get('admin/editstatuspm/{id}', 'FurnitureController@editstatuspm');
+Route::get('admin/editstatusps/{id}', 'FurnitureController@editstatusps');
 
 Route::get('admin/deleter/{id}', 'ProsesController@deleter');
 Route::get('admin/deletep/{id}', 'ProsesController@deletep');
@@ -53,6 +55,8 @@ Route::get('admin/datapemesan', 'FurnitureController@datapemesan');
 Route::POST('ruangtamu', 'ProsesController@ruangtamu');
 Route::POST('pesanbarang', 'ProsesController@pesanbarang');
 Route::post('admin/edit/{id}', 'ProsesController@edit');
+Route::POST('admin/editstatuspm/{id}', 'ProsesController@editstatuspm');
+Route::post('admin/editstatusps/{id}', 'ProsesController@editstatusps');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

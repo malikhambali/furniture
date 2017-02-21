@@ -24,6 +24,7 @@ class CreatePesansTable extends Migration
             $table->string('no_telpon');
             $table->string('image');
             $table->string('keterangan');
+            $table->enum('status',['proses','selesai','blom ditangani' ]);
             $table->timestamps();
         });
     }

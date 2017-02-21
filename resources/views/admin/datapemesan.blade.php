@@ -103,7 +103,8 @@
                         <th data-sortable="true">Nama Pemesan</th>
                         <th data-sortable="true">Alamat</th>
                         <th data-sortable="true">No Telepon</th>
-                        <th data-sortable="true">jumlah</th>
+                        <th data-sortable="true">Jumlah</th>
+                        <th data-sortable="true">Status</th>
                         <th data-sortable="true">Action</th>
                      </tr>
                   </thead>
@@ -116,13 +117,17 @@
                         <td><?php echo $i++;?></td>
                         <td><?php echo $key->namalengkap;?></td>
                         <td><?php echo $key->alamat;?></td>
-                        <td><?php echo $key->no_telp;?></td>
-                        <td><?php echo $key->jumlah;?></td>
+                        <td>+62 <?php echo $key->no_telp;?></td>
+                        <td><?php echo $key->jumlah;?> Unit</td>
+                        <td><?php echo strtoupper ($key->status);?></td>
                         <td>
-                           <a href="{{ url('admin/detailpemesan/'.$key['id'])}}"" type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
+                           <a href="{{ url('admin/detailpemesan/'.$key['id'])}}" style="margin-left:25px;" type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
                            </a>
                            <a href="{{ url('admin/deletepemesan/'.$key['id'])}}" type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah anda yakin akan menghapus ?')">Hapus<i class="fa fa-th-list" aria-hidden="true"></i>
                            </a>
+                             <a href="{{ url('admin/editstatuspm/'.$key['id'])}}"" type="submit" class="btn btn-primary">Status<i class="fa fa-th-list" aria-hidden="true"></i>
+                           </a>
+                         
                         </td>
                      </tr>
                      <?php

@@ -22,6 +22,7 @@ class CreateMesansTable extends Migration
             $table->string('no_telp');
             $table->string('email');
             $table->string('jumlah');
+            $table->enum('status',['proses','selesai','blom ditangani' ]);
             $table->timestamps();
 
         });

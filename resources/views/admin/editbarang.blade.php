@@ -116,6 +116,7 @@
 									<select class="form-control" name="status">
 										<option><?php echo $data['status'];?></option>
 										<option>tidak ada</option>
+										<option>ada</option>
 									
 									</select>
 								</div>

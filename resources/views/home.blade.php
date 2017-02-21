@@ -93,7 +93,9 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Tentang Furniture</h2>
                     <hr class="light">
-                    <p class="text-faded">Menerima Pemesanan Furniture secara online. User hanya perlu memasukan data diri dengan lengkap beserta Desain Furniture yang diinginkan</p>
+                    <p class="text-faded">Menerima Pemesanan Furniture secara online. Konsumen hanya perlu memasukan data diri dengan lengkap beserta Desain Furniture yang diinginkan</p>
+                     <p class="text-faded">Disini konsumen juga bisa memesan furniture sesuai dengan design yang konsumen buat sendiri</p>
+                   
                     <a href="#" class="btn btn-default btn-xl">Pesan Sekarang!</a>
                 </div>
             </div>
@@ -122,7 +124,7 @@
                     <div class="service-box">
                         <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Kedua</h3>
-                        <p class="text-muted">Jumlah Pensanan Furniture Sesuai Yang Dibutuhkan</p>
+                        <p class="text-muted">Jumlah Pesanan Furniture Sesuai Yang Dibutuhkan</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">

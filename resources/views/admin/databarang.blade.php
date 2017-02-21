@@ -85,7 +85,7 @@
 												<th data-sortable="true">Jenis Barang</th>
 												<th data-sortable="true">Harga</th>
 												<th data-sortable="true">Jumlah Barang</th>
-												<th data-sortable="true">status</th>
+												<th data-sortable="true">Status</th>
 												<th data-sortable="true">Action</th>
 								    </tr>
 										</thead>
@@ -99,10 +99,10 @@
 													<td><?php echo $key->namabarang;?></td>
 													<td><?php echo $key->jenisbarang;?></td>
 													<td>Rp.<?php echo $key->harga;?></td>
-													<td><?php echo $key->ketersediaan;?></td>
+													<td><?php echo $key->ketersediaan;?> Unit</td>
 													<td><?php echo strtoupper($key->status);?></td>
 													<td>
-													<a href="{{ url('admin/detail/'.$key['id'])}}"" type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
+													<a href="{{ url('admin/detail/'.$key['id'])}}" style="margin-left:25px;" type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
 													</a>
 													<a href="{{ url('admin/deleter/'.$key['id'])}}" type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah anda yakin akan menghapus ?')">Hapus<i class="fa fa-th-list" aria-hidden="true"></i>
 													</a>

@@ -61,9 +61,9 @@
 			<li class="parent ">
 
 			<li role="presentation" class="divider"></li>
-			<li class="active"><a href="{{ url('admin/datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
-			<li><a href="{{ url('admin/datapemesan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan user</a></li>
-		</ul>
+			<li><a href="{{ url('admin/datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
+			<li class="active"><a href="{{ url('admin/datapemesan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan user</a></li>
+			</ul>
 
 	</div><!--/.sidebar-->
 
@@ -71,57 +71,36 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Data Pesananan</li>
+				<li class="active">Edit </li>
 			</ol>
 		</div><!--/.row-->
 
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Data Pesananan </h1>
-				<table data-toggle="table"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="name" data-sort-order="desc">
-								    <thead>
-								    <tr>
-								        <th data-sortable="true" >No.</th>
-								        <th data-sortable="true">Nama Barang</th>
-												<th data-sortable="true">Jenis Barang</th>
-												<th data-sortable="true">Jumlah</th>
-												<th data-sortable="true">No Telepon</th>
-												<th data-sortable="true">Keterangan</th>
-												<th data-sortable="true">Status</th>
-												<th data-sortable="true">Action</th>
-								    </tr>
-										</thead>
-										<tbody>
-											<?php
-											$i=1;
-											foreach($data as $key){
-												?>
-												<tr>
-													<td><?php echo $i++;?></td>
-													<td><?php echo $key->nama_barang;?></td>
-													<td><?php echo $key->jenis_barang;?></td>
-													<td><?php echo $key->jumlah;?> Unit</td>
-													<td>+62 <?php echo $key->no_telpon;?></td>
-													<td><?php echo $key->keterangan;?></td>
-													<td><?php echo strtoupper($key->status);?></td>
+				<h1 class="page-header">Status Penanganan</h1>
 
-													
-													<td>
-													<a href="{{ url('admin/detailpesanan/'.$key['id'])}}" style="margin-left:25px;" type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
-													</a>
-													<a href="{{ url('admin/deletep/'.$key['id'])}}" type="submit" class="btn btn-primary" onclick="javascript: return confirm('Apakah anda yakin akan menghapus ?')">Hapus<i class="fa fa-th-list" aria-hidden="true"></i>
-													</a>
-													<a href="{{ url('admin/editstatusps/'.$key['id'])}}"" type="submit" class="btn btn-primary">Status<i class="fa fa-th-list" aria-hidden="true"></i>
-													</a>
-													
-														</td>
+					<div class="row">
+			<div class="col-md-8">
+				<div class="panel panel-default">
+					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> </div>
+					<div class="panel-body">
 
-												</tr>
-												<?php
-										}
-										?>
-										</tbody>
-								</table>
+				<form method="POST" action="{{ url('admin/editstatuspm/' .$data['id']) }}" enctype=multipart/form-data>
+				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+							<label>Status</label>
+									<select class="form-control" name="status">
+										<option>Proses</option>
+										<option>Blom Ditangani</option>
+										
+										<option>Selesai</option>
+									
+									</select>
+								</div>
+
+			<button type="submit" style="margin-left:15px; margin-bottom:10px;" class="btn btn-primary">Simpan</button>
+</form>
+
 
 
 			</div>

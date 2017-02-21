@@ -45,7 +45,7 @@
                                 </tr>
                                 <tr>
                                     <td>No Telepon</td><td>:</td>
-                                    <td>{{ $data->no_telp }}</td>
+                                    <td>{{ "+62".$data->no_telp }}</td>
                                 </tr>
                                 <tr>
                                     <td>email</td><td>:</td>
