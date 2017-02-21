@@ -12,14 +12,18 @@
     <title>Furniture</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url('aset/css/bootstrap.min.css') }}" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href="{{ url('http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800') }}" rel='stylesheet' type='text/css'>
+    <link href="{{ url('http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic')}}" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ url('font-awesome/css/font-awesome.min.css') }}" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="{{ url('aset/css/animate.min.css') }}" type="text/css">
 
     <!-- Custom CSS -->
-    <link href="css/business-casual.css" rel="stylesheet">
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ url('aset/css/creative.css') }}" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -28,154 +32,210 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
 </head>
 
-<body>
+<body id="page-top">
 
-    <div class="brand">Furniture </div>
-    <div class="address-bar">10581 Project | Malik Hambali, CA 90210 | 192.168.1.1</div>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="container">
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="index.html">Furniture</a>
+                <a class="navbar-brand page-scroll" href="#page-top">Furniture</a>
             </div>
+
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="{{('/')}}">Home</a>
+                        <a class="page-scroll" href="#about">Tentang</a>
                     </li>
                     <li>
-                        <a href="{{('about')}}">About</a>
+                        <a class="page-scroll" href="#services">Pemesanan</a>
                     </li>
                     <li>
-                        <a href="{{('blog')}}">Blog</a>
+                        <a class="page-scroll" href="#kue">FURNITURE</a>
                     </li>
                     <li>
-                        <a href="{{('kontak')}}">Contact</a>
+                        <a class="page-scroll" href="#contact">Kontak</a>
                     </li>
-                    <li>
-                        <a href="{{('pesanfurniture')}}">Order</a>
-                    </li>    
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container -->
+        <!-- /.container-fluid -->
     </nav>
 
-    <div class="container">
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1><font color="#FFFFFF">SELAMAT DATANG DI FURNITURE</font></h1>
+                <hr>
+           <!--          <form method="POST" action="{{ url('pesanfurniture') }}"> 
+                    <input type="hidden" name="username" value="sandy">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                <input type="hidden" name="password" value="5162">
+            -->     <a href="{{ url('pesanfurniture') }}" class="btn btn-primary btn-xl page-scroll">PESAN FURNITURE DISINI !</a>
+              
+            </div>
+        </div>
+    </header>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12 text-center">
-                    <div id="carousel-example-generic" class="carousel slide">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators hidden-xs">
-                            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img class="img-responsive img-full" src="img/img1.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="img/img2.jpg" alt="">
-                            </div>
-                            <div class="item">
-                                <img class="img-responsive img-full" src="img/img3.jpg" alt="">
-                            </div>
-                        </div>
-
-                        <!-- Controls -->
-                        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
-                            <span class="icon-prev"></span>
-                        </a>
-                        <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
-                            <span class="icon-next"></span>
-                        </a>
-                    </div>
-                    <h2 class="brand-before">
-                        <small>Welcome to</small>
-                    </h2>
-                    <h1 class="brand-name">Furniture</h1>
-                    <hr class="tagline-divider">
-                    <h2>
-                        <small>Kami
-                            <strong>Solusi kebutuhan furniture anda</strong>
-                        </small>
-                    </h2>
+    <section class="bg-primary" id="about" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Tentang Furniture</h2>
+                    <hr class="light">
+                    <p class="text-faded">Menerima Pemesanan Furniture secara online. User hanya perlu memasukan data diri dengan lengkap beserta Desain Furniture yang diinginkan</p>
+                    <a href="#" class="btn btn-default btn-xl">Pesan Sekarang!</a>
                 </div>
             </div>
         </div>
+    </section>
 
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Furniture 
-                        <strong></strong>
-                    </h2>
-                    <hr>
-                    <img class="img-responsive img-border img-left" src="img/intro-pic.jpg" alt="">
-                    <hr class="visible-xs">
-                    <p>Mebel atau furnitur adalah perlengkapan rumah yang mencakup semua barang seperti kursi, meja, dan lemari. Mebel berasal dari kata movable, yang artinya bisa bergerak. Pada zaman dahulu meja kursi dan lemari relatif mudah digerakkan dari batu besar, tembok, dan atap. Sedangkan kata furniture berasal dari bahasa Prancis fourniture (1520-30 Masehi). Fourniture mempunyai asal kata fournir yang artinya furnish atau perabot rumah atau ruangan. Walaupun mebel dan furniture punya arti yang beda, tetapi yang ditunjuk sama yaitu meja, kursi, lemari, dan seterusnya.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="box">
-                <div class="col-lg-12">
-                    <hr>
-                    <h2 class="intro-text text-center">Beautiful boxes
-                        <strong>to showcase your content</strong>
-                    </h2>
-                    <hr>
-                    <p>Use as many boxes as you like, and put anything you want in them! They are great for just about anything, the sky's the limit!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc placerat diam quis nisl vestibulum dignissim. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-    <footer>
+    <section id="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <h2 class="section-heading">CARA PEMESANAN FURNITURE</h2>
+                    <hr class="primary">
                 </div>
             </div>
         </div>
-    </footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                        <h3>Pertama</h3>
+                        <p class="text-muted">Masukan data diri dan alamat lengkap</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Kedua</h3>
+                        <p class="text-muted">Jumlah Pensanan Furniture Sesuai Yang Dibutuhkan</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Ketiga</h3>
+                        <p class="text-muted">Jika Sudah Admin akan mengecek dan menghubungi Pemesan</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Keempat</h3>
+                        <p class="text-muted">Pesanan pun akan segera dibuat</p>
+                    </div>
+                </div>
+              <div class="col-lg-12 text-center">
+              <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" position="center" data-wow-delay=".3s"></i>
+                        <h3>Kelima </h3>
+                        <p class="text-muted">Jika ingin mengetahui daftar, dan beberapa contoh furniture. Bisa diliat di Daftar furniture</p>
+                        <br><br>
+                        <a href="{{ url('listfurniture') }}" class="btn btn-primary btn-xl page-scrol">Lihat Daftar</a>
+                        </br></br> 
+                    </div>
+                </div>
+
+            
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+    <section class="no-padding" id="kue">
+     <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Beberapa Tampilan Furniture</h2>
+                    <hr class="primary">
+                    <div class="row no-gutter">
+                    @foreach($data as $key)
+                        <div class="col-lg-4 col-sm-6">
+                            <a href="#" class="kue-box">
+                                <img src="{{ url('admin/image/'.$key->image) }}" alt="">
+                                <div class="kue-box-caption">
+                                    <div class="kue-box-caption-content">
+                                        <div class="project-category text-faded">
+                                            {{$key->namabarang}}
+                                            
+                                        </div>
+                                        <div class="project-category text-faded">
+                                            Rp. {{$key->harga}}
+                                        </div>
+                                        
+                                        <div class="project-name">
+                                  
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        
+       
+        <div class="container-fluid">
+            <div class="row no-gutter">
+        
+                
+    </section>
+
+    <aside class="bg-dark">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2>Service FURNITURE</h2>
+                <a href="#" class="btn btn-default btn-xl wow tada">Pesan Furniture ?</a>
+            </div>
+        </div>
+    </aside>
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Kontak</h2><br>
+                    <hr class="primary">
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                    <p> <u></u></p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                    <p><a href="mailto:your-email@your-domain.com">https://www.facebook.com/malikhambali73</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="{{ url('aset/js/jquery.js') }}"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ url('aset/js/bootstrap.min.js') }}"></script>
 
-    <!-- Script to Activate the Carousel -->
-    <script>
-    $('.carousel').carousel({
-        interval: 5000 //changes the speed
-    })
-    </script>
+    <!-- Plugin JavaScript -->
+    <script src="{{ url('aset/js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url('aset/js/jquery.fittext.js') }}"></script>
+    <script src="{{ url('aset/js/wow.min.js') }}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ url('aset/js/creative.js') }}"></script>
 
 </body>
 

@@ -74,30 +74,62 @@
 
 
 		
-					<div class="row">
-			<div class="col-md-8">
+			
+			<div class="col-md-9">
 				<div class="panel panel-default">
-					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> </div>
-					<div class="panel-body">
-		
-
-				<form method="POST" action="{{ ('pesanbarang') }}" enctype=multipart/form-data>
+					<div class="panel-body tabs">
+					<form method="POST" action="{{ url('pesanbarang') }}" enctype=multipart/form-data>
 				<input type="hidden" name="_token" value="{{ csrf_token() }}">
+				
+						<ul class="nav nav-tabs">
+							<li class="active"><a href="#tab1" data-toggle="tab">Input Barang</a></li>
+							<li><a href="#tab2" data-toggle="tab">Data Diri Anda</a></li>
+						</ul>
+		
+						<div class="tab-content">
 
+							<div class="tab-pane fade in active" id="tab1">
+							<div class="form-group">
+					<label>Nama Barang</label>
+					<input class="form-control" name="nama_barang" placeholder="">
+						</div>
+								<div class="form-group">
+					<label>Jenis Barang</label>
+					<input class="form-control" name="jenis_barang" placeholder="">
+						</div>
+						<div class="form-group">
+				<label>Jumlah</label>
+				<input class="form-control" type="number" name="jumlah" placeholder="">
+			</div>
+			    
+							<div class="form-group">
+				<label>image input</label>
+				<input type="file" name="image">
+				 <p class="help-block">Example block-level help text here.</p>
+			</div>
 				<div class="form-group">
-				<label>Nama barang</label>
-				<input class="form-control" name="nama_barang" placeholder="">
+					<label>Keterangan</label>
+					<input class="form-control" name="keterangan" placeholder="">
+						</div>
+					
+
+
+
+
+						</div>	
+							<div class="tab-pane fade" id="tab2">
+								
+				<div class="form-group">
+				<label>Nama Lengkap</label>
+				<input class="form-control" name="namalengkap" placeholder="">
 			</div>
 
-			<div class="form-group">
-			<label>Jenis barang</label>
-			<input class="form-control" name="jenis_barang" placeholder="">
-		</div>
-		<div class="form-group">
-			<label>Jumlah</label>
-			<input class="form-control" type="number" name="jumlah" placeholder="">
-		</div>   <tr>
-                                    <td>No Telepon</td>
+
+				<div class="form-group">
+				<label>Alamat</label>
+				<input class="form-control" name="alamat" placeholder="">
+			</div>
+			    <td>No Telepon</td>
                                     <td>
                                         <div class="form-group input-group">
                                         	<span class="input-group-addon">+62</span>
@@ -105,29 +137,24 @@
                                             </div>
                                     </td>
                                 </tr>
-                               
-        <div class="form-group">
-	
-			<div class="form-group">
-				<label>image input</label>
-				<input type="file" name="image">
-				 <p class="help-block">Example block-level help text here.</p>
-			</div>
-			<div class="form-group">
-			<label>Keterangan</label>
-			<input class="form-control" name="keterangan" placeholder="">
-		</div>
+               	<div class="form-group">
 
+				<label>Email</label>
+				<input class="form-control" name="email" placeholder="">
+			</div>
+
+               
 			<button type="submit" class="btn btn-primary">Simpan</button>
 </form>
+</div>
 
-
-
-			</div>
-		</div><!--/.row-->
-		</li>
-						</ul>
+						</div>
 					</div>
+				</div><!--/.panel-->
+			</div><!--/.col-->
+			
+		
+
 
 			</div><!--/.col-->
 		</div><!--/.row-->

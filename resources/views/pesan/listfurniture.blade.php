@@ -80,6 +80,7 @@
 												<th data-sortable="true">Jenis Barang</th>
 												<th data-sortable="true">Harga</th>
 												<th data-sortable="true">Jumlah Barang</th>
+												<th data-sortable="true">gambar</th>
 												<th data-sortable="true">Status</th>
 												<th data-sortable="true">Action</th>
 												
@@ -96,9 +97,15 @@
 													<td><?php echo $key->jenisbarang;?></td>
 													<td>Rp.<?php echo $key->harga;?></td>
 													<td><?php echo $key->ketersediaan;?></td>
-													<td><?php echo strtoupper($key->status);?></td>
+													<td>  
+                                    <a href="{{ url('admin/image/'.$key['image']) }}" class="col-lg-12" target="_blank"><img src="{{ url('admin/image/'.$key['image']) }}" style="width:100px;height: 100px"></a></td>
+                                    				<td><?php echo strtoupper($key->status);?></td>
 													<td>
-													<a href="{{ ('pesan/detail/'.$key['id'])}}"" type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
+													<a href="{{ ('pesan/detail/'.$key['id'])}}" "type="submit" class="btn btn-primary">Lihat<i class="fa fa-th-list" aria-hidden="true"></i>
+													</a>
+													
+													<a href="{{ ('pesan/mesan/'.$key['id']) }}" "type="submit" class="btn btn-primary">mesan<i class="fa fa-th-list" aria-hidden="true">
+													</i>
 													</a>
 													</td>
 

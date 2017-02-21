@@ -54,17 +54,17 @@
 			</div>
 		</form>
 		<ul class="nav menu">
+		
 			<li><a href="{{ url('admin/home') }}"><svg class="glyph stroked home"><use xlink:href="#stroked-home"/></use></svg> Home</a></li>
-			<li><a href="{{ url('databarang') }}"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"/><</use></svg> Data Barang</a></li>
-			<li><a href="{{ url('inputbarang') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg> Input Barang</a></li>
+			<li><a href="{{ url('admin/databarang') }}"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"/><</use></svg> Data Barang</a></li>
+			<li><a href="{{ url('admin/inputbarang') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg> Input Barang</a></li>
 
 
 			<li class="parent ">
 
 			<li role="presentation" class="divider"></li>
-			<li class="active"><a href="{{ url('datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
-		
-		</ul>
+			<li class="active"><a href="{{ url('admin/datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
+			<li><a href="{{ url('admin/datapemesan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan user</a></li></ul>
 
 	</div>
 
@@ -72,18 +72,22 @@
 		<div class="row">
 			<ol class="breadcrumb">
 				<li><a href="#"><svg class="glyph stroked home"><use xlink:href="#stroked-home"></use></svg></a></li>
-				<li class="active">Icons</li>
+				<li class="active">Detail Pesanan</li>
 			</ol>
 		</div>
 
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Dashboard</h1>
+				<h1 class="page-header">Detail Pesanan</h1>
 
 					<div class="row">
 			<div class="col-md-8">
 				<div class="panel panel-default">
-					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> View</div>
+					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> Detail
+
+			<a href="{{ url('admin/laporancontoh/'.$data->id) }}"  type="submit" class=" col-sm-offset-8  btn btn-primary"><svg class="glyph stroked printer"  style="width:50px;height:20px; margin:2px"><use  xlink:href="#stroked-printer"/></svg></a>
+					</div>
+
 					<div class="panel-body">
 						<fieldset>  
 				 <table class="table table-bordered table-hover table-striped">
@@ -92,6 +96,7 @@
                                     <a href="{{ url('admin/image/'.$data['image']) }}" class="col-lg-12" target="_blank"><img src="{{ url('admin/image/'.$data['image']) }}" style="width:250px;"></a>
                             
                             	<td>
+                            	<h4>Rincian Barang</h4>
                                 <tr>
                                     <td>Nama Barang</td><td>:</td>
                                     <td>{{ $data->nama_barang }}</td>
@@ -104,10 +109,6 @@
                                     <td>Jumlah</td><td>:</td>
                                     <td>{{ $data->jumlah }}</td>
                                 </tr>
-                              	<tr>
-                                    <td>No Telepon</td><td>:</td>
-                                    <td>{{ "+62".($data->no_telpon) }}</td>
-                                </tr>
                                 <tr>
                                     <td>Keterangan</td><td>:</td>
                                     <td>{{ $data->keterangan }}</td>
@@ -115,6 +116,30 @@
                               	
                                 </td>
                             </table>
+                            <table class="table table-bordered table-hover table-striped">
+                             <td>
+                             <h3>Biodata</h3>
+                             </td>
+                              <tr>
+                                    <td>Nama Lengkap</td><td>:</td>
+                                    <td>{{ $data->namalengkap }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Alamat</td><td>:</td>
+                                    <td>{{ $data->alamat }}</td>
+                                </tr>
+                              	<tr>
+                                    <td>No Telepon</td><td>:</td>
+                                    <td>{{ "+62".($data->no_telpon) }}</td>
+                                </tr>
+                                <tr>
+                                    <td>email</td><td>:</td>
+                                    <td>{{ $data->email }}</td>
+                                </tr>
+                              	
+                              </td>
+                                     </table>
+				 
                        
 
 

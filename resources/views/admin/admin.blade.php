@@ -52,14 +52,16 @@
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="{{ url('admin/home') }}"><svg class="glyph stroked home"><use xlink:href="#stroked-home"/></use></svg> Home</a></li>
-			<li><a href="{{ url('databarang') }}"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"/><</use></svg> Data Barang</a></li>
-			<li><a href="{{ url('inputbarang') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg> Input Barang</a></li>
+			<li><a href="{{ url('admin/databarang') }}"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"/><</use></svg> Data Barang</a></li>
+			<li><a href="{{ url('admin/inputbarang') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg> Input Barang</a></li>
 
-				<li class="parent ">
+
+			<li class="parent ">
 
 			<li role="presentation" class="divider"></li>
-			<li><a href="{{ url('datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
-	
+			<li><a href="{{ url('admin/datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
+			<li><a href="{{ url('admin/datapemesan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan user</a></li>
+
 		</ul>
 		
 	</div><!--/.sidebar-->
@@ -101,6 +103,20 @@
 						<div class="col-sm-9 col-lg-7 widget-right">
 							<div class="large">{{ $pesan }}</div>
 							<div class="text-muted">Jumlah Pesanan</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+				<div class="col-xs-12 col-md-6 col-lg-3">
+				<div class="panel panel-teal panel-widget">
+					<div class="row no-padding">
+						<div class="col-sm-3 col-lg-5 widget-left">
+							<svg class="glyph stroked open folder"><use xlink:href="#stroked-open-folder"/></svg>
+						</div>
+						<div class="col-sm-9 col-lg-7 widget-right">
+							<div class="large">{{ $mesan }}</div>
+							<div class="text-muted">Pemesan</div>
 						</div>
 					</div>
 				</div>

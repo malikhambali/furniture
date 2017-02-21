@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\ruangtamu;
 use App\pesan;
 use DB;
-
+use App\mesan;
 
 class ProsesController extends Controller
 {
@@ -29,17 +29,22 @@ class ProsesController extends Controller
     $input->image = $image_name;
     $input->status = 'ada';
     $input->save();
-    return redirect('databarang');
+    return redirect('admin/databarang');
     }
     public function deleter($id)
     {
       DB::table('ruangtamus')->delete($id);
-      return redirect('databarang');
+      return redirect('admin/databarang');
     }
     public function deletep($id)
     {
       DB::table('pesans')->delete($id);
-      return redirect('datapesanan');
+      return redirect('admin/datapesanan');
+    }
+    public function deletepemesan($id)
+    {
+      DB::table('mesans')->delete($id);
+      return redirect('admin/datapemesan');
     }
     public function edit($id)
     {
@@ -50,11 +55,14 @@ class ProsesController extends Controller
       $editb->ketersediaan = Input::get('ketersediaan');
       $editb->status = Input::get('status');
       $editb->save();
-      return redirect('databarang');
+      return redirect('admin/databarang');
     }
     public function pesanbarang()
     {
       $input = new pesan;
+      $input->namalengkap = Input::get('namalengkap');
+      $input->alamat = Input::get('alamat');
+      $input->email = Input::get('email');
       $input->nama_barang = Input::get('nama_barang');
       $input->jenis_barang = Input::get('jenis_barang');
       $input->jumlah = Input::get('jumlah');
@@ -70,5 +78,18 @@ class ProsesController extends Controller
       return redirect('pesanfurniture');
     
       
+    }
+    public function mesan()
+    {
+      $input = new mesan;
+      $input->namalengkap = Input::get('namalengkap');
+      $input->id_barang = Input::get('id_barang');
+      $input->image_barang = Input::get('image_barang');
+      $input->alamat = Input::get('alamat');
+      $input->no_telp = Input::get('no_telp');
+      $input->email = Input::get('email');
+      $input->jumlah = Input::get('jumlah');
+      $input->save();
+      return redirect('listfurniture');
     }
 }

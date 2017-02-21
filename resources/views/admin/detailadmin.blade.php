@@ -54,16 +54,17 @@
 			</div>
 		</form>
 		<ul class="nav menu">
+			
 			<li><a href="{{ url('admin/home') }}"><svg class="glyph stroked home"><use xlink:href="#stroked-home"/></use></svg> Home</a></li>
-			<li class="active"><a href="{{ url('databarang') }}"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"/><</use></svg> Data Barang</a></li>
-			<li><a href="{{ url('inputbarang') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg> Input Barang</a></li>
+			<li class="active"><a href="{{ url('admin/databarang') }}"><svg class="glyph stroked external hard drive"><use xlink:href="#stroked-external-hard-drive"/><</use></svg> Data Barang</a></li>
+			<li><a href="{{ url('admin/inputbarang') }}"><svg class="glyph stroked pencil"><use xlink:href="#stroked-pencil"/></svg> Input Barang</a></li>
 
 
 			<li class="parent ">
 
 			<li role="presentation" class="divider"></li>
-			<li><a href="{{ url('datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
-		
+			<li><a href="{{ url('admin/datapesanan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan</a></li>
+			<li><a href="{{ url('admin/datapemesan') }}"><svg class="glyph stroked male-user"><use xlink:href="#stroked-male-user"></use></svg> Data Pesanan user</a></li>
 		</ul>
 
 	</div>
@@ -83,7 +84,7 @@
 					<div class="row">
 			<div class="col-md-8">
 				<div class="panel panel-default">
-					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg> </div>
+					<div class="panel-heading"><svg class="glyph stroked tag"><use xlink:href="#stroked-tag"/></svg>{{ $ruang->namabarang }} </div>
 					<div class="panel-body">
 						<fieldset>  
 				 <table class="table table-bordered table-hover table-striped">
@@ -92,6 +93,7 @@
                                     <a href="{{ url('admin/image/'.$data['image']) }}" class="col-lg-12" target="_blank"><img src="{{ url('admin/image/'.$data['image']) }}" style="width:250px;"></a>
                             
                             	<td>
+                            	<h4>Rincian</h4>
                                 <tr>
                                     <td>Nama Barang</td><td>:</td>
                                     <td>{{ $data->namabarang }}</td>

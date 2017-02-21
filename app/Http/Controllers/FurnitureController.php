@@ -38,13 +38,15 @@ class FurnitureController extends Controller
     {
       $ruangtamu = \App\ruangtamu::count();
       $pesan     = \App\pesan::count();
-      return view('admin.admin')->with('ruangtamu',$ruangtamu)->with('pesan',$pesan);
+      $mesan     = \App\mesan::count();
+      return view('admin.admin')->with('ruangtamu',$ruangtamu)->with('pesan',$pesan)->with('mesan',$mesan);
 
     }
     public function detailadmin($id)
     {
       $data = ruangtamu::find($id);
-      return view('admin.detailadmin', ['data'=>$data]);
+      $ruang = ruangtamu::where('id',$id)->first();   
+      return view('admin.detailadmin', ['data'=>$data,'ruang'=>$ruang]);
     }
     public function listfurniture()
     {
@@ -70,6 +72,38 @@ class FurnitureController extends Controller
     {
       $data = pesan::find($id);
       return view('admin.detailpesanan', ['data'=>$data]);
+    }
+    public function mesan($id)
+    {
+      $data = pesan::find($id);
+      $ruang = ruangtamu::where('id',$id)->first();
+      return view('pesan.mesan', ['data'=>$data,'ruang'=>$ruang]);
+    }
+    public function datapemesan()
+    {
+      $data = \App\mesan::orderBy('id','desc')->get();
+      return view('admin.datapemesan', ['data'=>$data]);
+    }
+    public function detailpemesan($id)
+    {
+      $data = \App\mesan::find($id);
+      return view('admin.detailpemesan', ['data'=>$data]);
+    }
+    public function laporanpemesan($id)
+    {
+      $data = \App\mesan::find($id);
+      return view('admin.laporanpemesan', ['key'=>$data]);
+    }
+    public function laporan($id)
+    {
+      $data = \App\mesan::find($id);
+      return view('admin.laporan', ['data'=>$data]);
+    }
+    public function laporancontoh($id)
+    {
+      $data = \App\pesan::find($id);
+      return view('admin.laporancontoh', ['data'=>$data]);
+
     }
 
 }
